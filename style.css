@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+:root{
+    --cor0: #011C6B;
+    --cor01: #011142;
+    --cor02: #01258F;
+    --cor03: #023BE6;
+    --cor05: #0231BD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    /*configurações globais das CSS*/
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    
+    background-attachment: fixed;
+}
+
+/*Cabeçalho e navegação: header fixo com elementos sobrepostos*/
+header{
+    background: var(--cor01);
+    position: fixed;/*Gruda e acompanha o scroll*/
+    top: 0;/*Gruda no topo da tela*/
+    left: 0;
+    width: 100%;
+    z-index: 1000;/*fica na frente de tudo*/
+    
+    
+}
+
+nav{
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 13vh;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+
+    border-radius: 5px;
+    
+    
+}
+
+/*Logo Loja*/
+.logo{
+    width: 120px;
+    height: 120px; 
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/*Logo Topo*/
+.logo-nome{
+    display: flex;/*coloca os elementos lado a lado*/
+    align-items: center;
+
+}
+.logo-nome h1{
+    color: white;
+    font-size: 20px;
+    
+
+}
+
+/* Menu navegação*/
+.menu{
+    margin-left: auto;/*Empurra para a direita*/
+}
+.menu ul{
+    display: flex;
+    gap: 30px;/*Espaço entre os elementos*/
+    list-style: none;/*Tira a bolinha*/
+    transition: color 0.3 ease;
+}
+.nav-link{
+    font-weight: bold;
+    text-decoration: none;/*não tem mais a linha inferior*/
+    font-size: 16px;
+    color: white;
+}
+.nav-link:hover{
+    color: var(--cor03);
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;/*deixa em coluna*/
+    min-width: 320px;
+    width: 100%;
+}
+
+/*Todas As Section*/
+.section{
+    width: 100%;
+    min-height: 100vh;
+    /*height: calc(100vh - 13vh);/*Altura visivel da tela*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-hero{
+    background-image: linear-gradient(to right, #011142, #01258F);  
+    text-align: center;
+    color: white;  
+    padding-top: 13vh;
+}
+
+.hero-h1{
+    font-size: 3.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.paragrafo-h1{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+/*Botão Solicite Orçamento*/
+.btn-orcamento{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px; 
+}
+
+.btn-home{
+    color: white;
+    text-decoration: none;/*não tem mais a linha inferior*/
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn-whatsapp{
+    background-color: #023BE6;
+    color: white;/*Cor da borda*/
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover{
+    background-color: var(--cor01);
+    border-color: white;
+    transform: translateY(-3px);/*move vertical*/
+}
+
+/*Section Serviço*/
+.section-servico{
+    justify-content: flex-start;
+    padding-top: 50px;
+    
+    
+    
+}
+.h2-servicos{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    text-align: center; 
+    color: var(--cor01);
+    padding-top: 80px;
+}
+
+.paragrafo-servico{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-top: 15px;
+    text-align: center;
+    color: gray;
+}
+
+.div-main-servico {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 50px;
+    row-gap: 50px;
+    justify-content: center;
+    width: 80%;
+    /*height: 500px;*/  
+    margin: auto;
+    padding-top: 30px; 
+   
+   
+}
+
+.div-main-servico img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 2px;
+    width: 50px;
+    height: 50px;
+}
+
+.card{
+    flex: 1 1 300px;/*Comece com 300px, mas permita crescer ou diminuir conforme o espaço disponível.*/
+    background-color: var(--cor0);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.151);/*sombra*/
+    transition: all 0.3s ease;
+    margin-bottom:20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);/*move vertical*/
+    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.151);/*sombra*/
+}
+
+.div-main-servico h3 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.div-main-servico p {
+    color: rgba(255, 255, 255, 0.877);
+    margin-top: 25px;
+}
+
+/*SECTION PRODUTOS*/
+.section-produtos{
+    background: linear-gradient(to right, #011142, #01258F); 
+    justify-content: flex-start;
+    padding-top: 100px;
+    
+}
+
+.h2-produtos {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    margin-top: 35px;
+}
+
+.section-produtos p {
+    color: rgba(255, 255, 255, 0.815);
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.div-main-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 50px;
+    row-gap: 50px;
+    margin-top: 30px;
+    width: 70%;
+    margin-bottom: 40px;
+    
+}
+.div-main-produtos img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+
+    border-radius: 10%;
+
+}
+
+.card-produtos {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.151);/*sombra*/
+    transition: all 0.3s ease;
+      text-align: center;
+}
+
+.card-produtos:hover {
+   transform: translateY(-10px);/*move vertical*/ 
+}
+
+.h3-produtos {
+    color: var(--cor02);
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*SECTION CONTATO*/
+.section-contato {
+    justify-content: flex-start;
+    padding-top: 100px;
+}
+
+.h2-contato {
+    font-size: 3.75rem;/*respeita o tamanho de letra que o usuário definiu na raiz/configurações do dispositivo*/
+    color: #011142;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.paragrafo-contato {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    color: gray;
+}
+
+.div-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.item-contato {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-contato {
+    background-color: #023BE6;
+    border-radius: 50%;
+    padding: 10px;
+}
+.text-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contato-h3 {
+    color: #011C6B;
+    font-size: 1.5rem;
+}
+
+.footer{
+    background-color: var(--cor01);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a{
+    color:white;
+}
