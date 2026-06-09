@@ -1,0 +1,25 @@
+@media (max-width: 768px){
+    /*Estilos para telas menores que 768px (tablets e smartphones)*/
+
+    nav{
+        flex-direction: column;/*Empilha os itens verticalmente*/
+        height:auto;/*Permite que a altura se ajuste ao conteúdo*/
+        padding: 15px;
+        gap: 15px
+    }
+
+    .menu{
+        margin-left: 0;/*Remove a margem esquerda para centralizar o menu*/
+    }
+
+    .menu ul{
+        flex-wrap:wrap;/*Permite que os itens do menu quebrem para a próxima linha se necessario*/
+        justify-content: center;/*Centraliza os itens do menu*/
+        gap: 15px;
+    }
+
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+}
